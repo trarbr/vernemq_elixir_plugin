@@ -14,9 +14,16 @@ The guide comes with a Vagrantfile that sets up an environment with:
 - Elixir 1.4.5
 - Mosquitto clients (for testing)
 
-However, the guide should be applicate to any OS that VerneMQ runs on, and work with any Erlang/Elixir version as long as they are compatible with the Erlang version VerneMQ has been compiled against.
+However, the guide should be applicable to any OS that VerneMQ runs on, and work with any Erlang/Elixir version as long as they are compatible with the Erlang version VerneMQ has been compiled against.
 
-If you already have a compatible environment you can skip the Vagrant setup. Otherwise, you can create the Vagrant environment by running `vagrant up` ([install vagrant](https://www.vagrantup.com/downloads.html) if you don't have it already).
+If you want to use the Vagrant environment, you'll need to [install vagrant](https://www.vagrantup.com/downloads.html) if you don't have it already. Then clone this project, create the environment and SSH into it with:
+
+```
+git clone https://github.com/trarbr/vernemq_elixir_plugin.git
+cd vernemq_elixir_plugin
+vagrant up
+vagrant ssh
+```
 
 ## Project setup
 
@@ -178,7 +185,7 @@ sudo systemctl start vernemq
 
 The output from the calls to `IO.puts` will be visible in the file `/var/log/vernemq/erlang.log.1`. If you open it, you should see a line with the text `*** VernemqElixirPlugin starting`.
 
-Next, we can that the other hooks are executed by starting a subscriber and publisher. Start a subscriber in one terminal:
+Next, we can check that the other hooks are executed by starting a subscriber and publisher. Start a subscriber in one terminal:
 
 ```sh
 mosquitto_sub -t '#'
