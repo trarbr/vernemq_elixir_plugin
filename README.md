@@ -149,8 +149,6 @@ You'll also need to tell VerneMQ which hooks are implemented in the plugin. This
       {VernemqElixirPlugin, :on_client_wakeup, 1, []},
       {VernemqElixirPlugin, :on_client_offline, 1, []},
       {VernemqElixirPlugin, :on_client_gone, 1, []},
-      {VernemqElixirPlugin, :on_register, 3, []},
-      {VernemqElixirPlugin, :on_register, 3, []},
       {VernemqElixirPlugin, :auth_on_subscribe, 3, []},
       {VernemqElixirPlugin, :on_subscribe, 3, []},
       {VernemqElixirPlugin, :on_unsubscribe, 3, []},
